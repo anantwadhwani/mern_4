@@ -4,19 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Landing Page</title>
+
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Optional custom styles -->
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     .jumbotron {
       background: linear-gradient(to right, #007bff, #00c6ff);
       color: white;
       padding: 5rem 2rem;
       text-align: center;
     }
-    .card-icon {
-      font-size: 40px;
-      color: #0d6efd;
+    .card img {
+      height: 150px;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -24,7 +28,7 @@
 
   <!-- Header / Navbar -->
   <header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
       <div class="container">
         <a class="navbar-brand" href="#">MyApp</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -32,9 +36,9 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -44,21 +48,22 @@
   <!-- Main Section -->
   <main>
     <!-- Jumbotron -->
-    <section class="jumbotron">
+    <section id="home" class="jumbotron">
       <div class="container">
         <h1 class="display-4">Welcome to MyApp</h1>
         <p class="lead">Delivering amazing features that enhance your productivity and workflow.</p>
-        <a href="#" class="btn btn-light btn-lg">Get Started</a>
+        <a href="#features" class="btn btn-light btn-lg">Explore Features</a>
       </div>
     </section>
 
-    <!-- Three-Card Grid -->
-    <section class="container my-5">
+    <!-- Features / Three-Card Grid -->
+    <section id="features" class="container my-5">
+      <h2 class="text-center mb-4">Features</h2>
       <div class="row text-center">
         <div class="col-md-4">
-          <div class="card shadow-sm p-3 mb-5 bg-white rounded">
+          <div class="card shadow-sm mb-4">
+            <img src="https://via.placeholder.com/300x150?text=Speed" class="card-img-top" alt="Fast Performance">
             <div class="card-body">
-              <div class="card-icon mb-3">🚀</div>
               <h5 class="card-title">Fast Performance</h5>
               <p class="card-text">Experience blazing fast speed and smooth UI transitions.</p>
             </div>
@@ -66,9 +71,9 @@
         </div>
 
         <div class="col-md-4">
-          <div class="card shadow-sm p-3 mb-5 bg-white rounded">
+          <div class="card shadow-sm mb-4">
+            <img src="https://via.placeholder.com/300x150?text=Security" class="card-img-top" alt="Secure">
             <div class="card-body">
-              <div class="card-icon mb-3">🔒</div>
               <h5 class="card-title">Secure & Reliable</h5>
               <p class="card-text">We prioritize your data privacy and ensure high-level protection.</p>
             </div>
@@ -76,9 +81,9 @@
         </div>
 
         <div class="col-md-4">
-          <div class="card shadow-sm p-3 mb-5 bg-white rounded">
+          <div class="card shadow-sm mb-4">
+            <img src="https://via.placeholder.com/300x150?text=Customization" class="card-img-top" alt="Customizable">
             <div class="card-body">
-              <div class="card-icon mb-3">⚙️</div>
               <h5 class="card-title">Customizable</h5>
               <p class="card-text">Easily tailor features to match your specific needs and use cases.</p>
             </div>
@@ -89,7 +94,7 @@
   </main>
 
   <!-- Footer -->
-  <footer class="bg-dark text-white py-4">
+  <footer id="contact" class="bg-dark text-white py-4">
     <div class="container d-flex justify-content-between flex-column flex-md-row">
       <div>
         <h5>MyApp</h5>
@@ -110,7 +115,7 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS (Bundle includes Popper) -->
+  <!-- Bootstrap JS Bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
